@@ -34,13 +34,13 @@ namespace eAppointmentServer.Infrastructure.Services
             List<string?> stringRoles = roles.Select(s => s.Name).ToList();
 
             List<Claim> claims = new()
-        {
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Name, user.FullName),
-            new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
-            new Claim("UserName", user.UserName ?? string.Empty),
-            new Claim(ClaimTypes.Role, JsonSerializer.Serialize(stringRoles))
-        };
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.FullName),
+                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+                new Claim("UserName", user.UserName ?? string.Empty),
+                new Claim(ClaimTypes.Role, JsonSerializer.Serialize(stringRoles))
+            };
 
             DateTime expires = DateTime.Now.AddDays(1);
 
