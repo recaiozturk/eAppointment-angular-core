@@ -30,6 +30,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors(); app.UseCors();
+
 Helper.CreateUserAsync(app).Wait();
 
 app.Run();
