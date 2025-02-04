@@ -35,3 +35,5 @@ app.UseCors(); app.UseCors();
 Helper.CreateUserAsync(app).Wait();
 
 app.Run();
+
+//silincek
