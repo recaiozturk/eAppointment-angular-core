@@ -98,6 +98,7 @@ export class HomeComponent {
         this.addModalCloseBtn?.nativeElement.click();
         this.createModel = new CreateAppointmentModel();
         this.getAllAppointments();
+        console.log(this.appointments);
       })
     }
   }

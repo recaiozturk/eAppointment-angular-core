@@ -1,9 +1,11 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eAppointmentServer.WebAPI.Abstractions
 {
     [Route("api/[controller]/[action]")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [ApiController]
     public abstract class BaseApiController: ControllerBase
     {
