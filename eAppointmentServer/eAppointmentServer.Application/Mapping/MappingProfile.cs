@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using eAppointmentServer.Application.Features.Doctors.CreateDoctor;
 using eAppointmentServer.Application.Features.Doctors.UpdateDoctor;
 using eAppointmentServer.Application.Features.Patients.CreatePatient;
 using eAppointmentServer.Application.Features.Patients.UpdatePatient;
+using eAppointmentServer.Application.Features.Users.CreateUsers;
+using eAppointmentServer.Application.Features.Users.UpdateUsers;
 using eAppointmentServer.Domain.Entities;
 using eAppointmentServer.Domain.Enums;
 
@@ -29,6 +26,9 @@ namespace eAppointmentServer.Application.Mapping
 
             CreateMap<CreatePatientCommand, Patient>();
             CreateMap<UpdatePatientCommand, Patient>();
+
+            CreateMap<CreateUserCommand, AppUser>();
+            CreateMap<UpdateUserCommand, AppUser>();
 
         }
     }
