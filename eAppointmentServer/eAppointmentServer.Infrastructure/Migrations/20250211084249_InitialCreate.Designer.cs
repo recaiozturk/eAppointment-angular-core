@@ -12,8 +12,8 @@ using eAppointmentServer.Infrastructure.Context;
 namespace eAppointmentServer.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250204063406_InitialCrerate2")]
-    partial class InitialCrerate2
+    [Migration("20250211084249_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
