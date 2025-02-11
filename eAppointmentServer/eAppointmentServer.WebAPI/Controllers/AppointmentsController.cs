@@ -59,7 +59,5 @@ namespace eAppointmentServer.WebAPI.Controllers
             var response = await _mediator.Send(request, cancellationToken);
             return StatusCode(response.StatusCode, response);
         }
-
-        //test backend
     }
 }
